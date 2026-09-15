@@ -1,54 +1,37 @@
 # 24/7 Intelligent AI Code Reviewer — ReviewOS
 
-A local AI-powered code review application using Node.js, Express and Google Gemini.
+A cloud-AI code review application using Node.js, Express and Puter.js.
+
+## AI architecture
+- Browser calls Puter.js cloud AI directly
+- No Gemini API key
+- No local Ollama/model installation
+- Node.js backend stores review history only
+- Code-review output is structured as JSON for the ReviewOS dashboard
 
 ## Features
 - AI code review for Java, JavaScript, Python, SQL and C++
 - Security, correctness, performance, maintainability and readability analysis
 - Health score, findings, strengths and next steps
-- Local review history stored as JSON
+- Review history stored as JSON
 - Simple local email session authentication
-- No API key committed to the repository
+- No AI API secret committed to the repository
 
-## Run locally
+## Run
 
 Requirements: Node.js 18+
 
 ```powershell
 npm install
-Copy-Item .env.example .env
-```
-
-Add your Gemini API key to `.env`:
-
-```env
-GEMINI_API_KEY=YOUR_GEMINI_API_KEY
-PORT=3000
-```
-
-Then run:
-
-```powershell
 npm start
 ```
 
 Open `http://localhost:3000`.
 
-## Project structure
-
-```text
-247-intelligent-code-reviewer/
-├── public/
-│   ├── index.html
-│   └── login.html
-├── data/
-│   └── .gitkeep
-├── .env.example
-├── .gitignore
-├── package.json
-├── server.js
-└── README.md
-```
+You do **not** need to create a Gemini key or put an AI key in `.env`.
 
 ## Important
+
+Puter.js is a third-party cloud AI service. Its free availability, model selection, quotas and fair-use policies can change. The project therefore does not promise unlimited AI usage forever.
+
 The local login is intentionally lightweight for development. It is not production-grade authentication. For production, use a real identity provider, secure session storage, HTTPS and a database.
