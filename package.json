@@ -1,10 +1,10 @@
 {
-  "name": "247-intelligent-code-reviewer-local",
-  "version": "1.0.0",
+  "name": "247-intelligent-code-reviewer",
+  "version": "2.0.0",
   "private": true,
-  "description": "Local 24/7 Intelligent AI Code Reviewer using Gemini API and JSON file storage.",
+  "description": "24/7 Intelligent AI Code Reviewer using browser-based Puter.js cloud AI and Node.js persistence.",
   "main": "server.js",
   "scripts": { "start": "node server.js", "dev": "node server.js" },
   "engines": { "node": ">=18" },
-  "dependencies": { "dotenv": "^16.4.7", "express": "^4.21.2" }
+  "dependencies": { "express": "^4.21.2" }
 }
